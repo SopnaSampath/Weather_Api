@@ -66,7 +66,7 @@ async function weatherInfo(city ){
     const format_time='06:00:00';
     let current_date=new Date().toISOString().split("T");
    // const today_date=''
-   var index=0;
+   var index=1;
     weatherforecast.list.forEach((element, i) => {
         
         if(element.dt_txt.includes(format_time) &&!element.dt_txt.includes(current_date) && index<3){
@@ -159,4 +159,5 @@ function isLetterOnly(dup){
     return  /^[a-zA-Z\s]+$/.test(dup);
 
 }
+
 
