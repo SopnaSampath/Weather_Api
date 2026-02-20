@@ -27,6 +27,7 @@ body{
     background-color: rgba(131, 130, 130, 0.651);
     border-radius: 12px;
     padding: 10px 20px;
+    overflow:hidden;
 }
 .content{
     display:none;
@@ -223,4 +224,5 @@ body{
     padding-top: 100px;
     
    
+
 }
