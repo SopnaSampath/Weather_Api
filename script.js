@@ -66,8 +66,8 @@ async function weatherInfo(city ){
     const format_time='06:00:00';
     let current_date=new Date().toISOString().split("T");
    // const today_date=''
-   var index=0;
-    weatherforecast.list.forEach(element => {
+   // var index=0;
+    weatherforecast.list.forEach((element, index) => {
         
         if(element.dt_txt.includes(format_time) &&!element.dt_txt.includes(current_date) && index<3){
            
@@ -85,8 +85,6 @@ async function weatherInfo(city ){
                         <h4>${Math.round(element.main.temp)} ℃</h4>
                     </div>
                 `;
-
-                index++;
 
                 forecastdata.insertAdjacentHTML("beforeend",forecastInfo);
             
@@ -157,4 +155,5 @@ searchBar.addEventListener('keydown',(event)=>{
 
 function isLetterOnly(dup){
     return  /^[a-zA-Z\s]+$/.test(dup);
+
 }
